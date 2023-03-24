@@ -35,12 +35,6 @@
       </v-list>
     </v-navigation-drawer>
 
-    <!-- <v-app-bar app> -->
-      <!-- <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon> -->
-<!--  -->
-      <!-- <v-toolbar-title>Application</v-toolbar-title> -->
-    <!-- </v-app-bar> -->
-
     <v-app-bar 
       app
       prominent 
@@ -87,6 +81,7 @@
       items: [
           { title: 'Tarefas', icon: 'mdi-view-dashboard', to:'/' },
           { title: 'Sobre', icon: 'mdi-help-box', to: '/sobre' },
+          { title: 'Todo List', icon: 'mdi-help-box', to: '/todo' },
         ], 
     }),
   }
