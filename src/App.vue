@@ -79,9 +79,9 @@
     data: () => ({ 
       drawer: null,
       items: [
-          { title: 'Tarefas', icon: 'mdi-view-dashboard', to:'/' },
+          { title: 'Tarefas', icon: 'mdi-view-dashboard', to:'/tarefas' },
           { title: 'Sobre', icon: 'mdi-help-box', to: '/sobre' },
-          { title: 'Todo List', icon: 'mdi-help-box', to: '/todo' },
+          { title: 'Todo List', icon: 'mdi-help-box', to: '/' },
         ], 
     }),
   }

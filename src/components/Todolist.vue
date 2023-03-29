@@ -24,16 +24,21 @@
 
                                 <v-list-item-content>
                                     <v-list-item-title :class="{ 'text-decoration-line-through': tarefa.status }">{{
-                                        tarefa.titulo }}</v-list-item-title>
+                                        tarefa.titulo
+                                    }}</v-list-item-title>
                                 </v-list-item-content>
 
                                 <v-list-item-action>
-                                    <v-btn icon @click.stop="editar(tarefa.id)">
-                                        Edit
-                                    </v-btn>
-                                    <v-btn icon @click.stop="removerTarefa(tarefa.id)">
-                                        <v-icon color="red lighten-1">mdi-delete-circle</v-icon>
-                                    </v-btn>
+                                    <v-menu offset-y>
+                                        <template v-slot:activator="{ on, attrs }">
+                                            <v-btn icon @click.stop="editar(tarefa.id)">
+                                                <v-icon>mdi-pencil</v-icon>
+                                            </v-btn>
+                                            <v-btn icon @click.stop="removerTarefa(tarefa.id)">
+                                                <v-icon color="gray lighten-1">mdi-delete-circle</v-icon>
+                                            </v-btn>
+                                        </template>
+                                    </v-menu>
                                 </v-list-item-action>
 
                             </template>
@@ -136,9 +141,9 @@ export default {
                     .finally(() => {
                         this.tarefaId = null;
                         this.input = '',
-                        this.tituloForm = 'Cadastro';
+                            this.tituloForm = 'Cadastro';
                     })
-            } 
+            }
         },
 
         mudarStatusDaTarefa() {
